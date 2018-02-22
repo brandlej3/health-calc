@@ -1,0 +1,60 @@
+.grid-body {
+  margin: auto;
+  width: 50%;
+}
+@media only screen and (max-width: 500px) {
+  body {
+    width: 100%;
+  }
+}
+.jumbotron {
+  background-color: grey;
+  color: white;
+  margin-bottom: 1.5em;
+  text-align: center;
+  height: 100%;
+}
+#gender-label {
+  display: inline-block;
+}
+#male {
+  background-color: red;
+  width: 4em;
+  display: inline-block;
+  height: 4em;
+}
+.gender-group{
+  display: inline-block;
+  padding-right: 3em;
+}
+h3 {
+  display: inline-block;
+  width: 4em;
+}
+#female {
+  background-color: yellow;
+  width: 4em;
+  display: inline-block;
+  height: 4em;
+}
+.input-labels {
+  display: inline-block;
+  padding-right: 3em;
+}
+.activity-grid {
+  float: left;
+  width: 48%;
+  height: 4em;
+}
+#one {
+  background-color: yellow;
+}
+#two {
+  background-color: red;
+}
+#three {
+  background-color: purple;
+}
+#four {
+  background-color: green;
+}
