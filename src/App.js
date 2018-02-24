@@ -6,6 +6,7 @@ import { CalorieDisplay } from './Display.js';
 
 class App extends Component {
   state = {
+    clicked: false,
     gender: null,
     weight: null,
     height: null,
@@ -13,6 +14,7 @@ class App extends Component {
     activityLevel: null
   }
   static propTypes = {
+    clicked: PropTypes.bool,
     gender: PropTypes.string,
     weight: PropTypes.number,
     height: PropTypes.number,
@@ -20,6 +22,7 @@ class App extends Component {
     activityLevel: PropTypes.string
   }
   static defaultProps = {
+    clicked: false,
     gender: "",
     weight: 0,
     height: 0,
@@ -30,6 +33,7 @@ class App extends Component {
   handleCalculate = (e) => {
     e.preventDefault();
     this.setState({
+      clicked: true,
       weight: parseInt(e.target.weight.value, 10),
       height: parseInt(e.target.height.value, 10),
       age: parseInt(e.target.age.value, 10)
@@ -97,7 +101,7 @@ class App extends Component {
             <Col xs={12} md={12}>
               <Button type="submit">Calculate !</Button>
             </Col>
-            {this.renderCalorieDisplay()}
+            {this.state.clicked ? this.renderCalorieDisplay() : ""}
           </Row>
         </Grid>
       </form>
