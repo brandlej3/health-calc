@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import './App.css';
 import { Button, Grid, Row, Col, Jumbotron } from 'react-bootstrap';
 import PropTypes from 'prop-types';
+import { CalorieDisplay } from './Display.js';
 
 class App extends Component {
   state = {
     gender: null,
     weight: null,
     height: null,
-    age: null,
+    age: 0,
     activityLevel: null
   }
   static propTypes = {
@@ -39,6 +40,9 @@ class App extends Component {
   }
   handleActivityLevel = (e) => {
     this.setState({ activityLevel : e.target.id });
+  }
+  renderCalorieDisplay() {
+    return < CalorieDisplay stateArray={this.state} />;
   }
   render() {
     return (
@@ -93,6 +97,7 @@ class App extends Component {
             <Col xs={12} md={12}>
               <Button type="submit">Calculate !</Button>
             </Col>
+            {this.renderCalorieDisplay()}
           </Row>
         </Grid>
       </form>
