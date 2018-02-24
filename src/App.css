@@ -14,9 +14,6 @@
   text-align: center;
   height: 100%;
 }
-#gender-label {
-  display: inline-block;
-}
 #male {
   background-color: red;
   width: 4em;
@@ -46,15 +43,15 @@ h3 {
   width: 48%;
   height: 4em;
 }
-#one {
+#sedentary {
   background-color: yellow;
 }
-#two {
+#light {
   background-color: red;
 }
-#three {
+#moderate {
   background-color: purple;
 }
-#four {
+#very {
   background-color: green;
 }
