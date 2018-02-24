@@ -8,6 +8,7 @@ export class CalorieDisplay extends React.Component {
         var heightMultiplier = 0;
         var ageMultiplier = 0;
         var calculatedValue = 0;
+        var activityMultiplier = 0;
         if(this.props.stateArray.gender === "male")
         {
             genderMultiplier = 66;
@@ -21,8 +22,23 @@ export class CalorieDisplay extends React.Component {
             heightMultiplier = 4.7;
             ageMultiplier = 4.7;
         }
-        
-        calculatedValue = genderMultiplier + (weightMultiplier * this.props.stateArray.weight) + (heightMultiplier * this.props.stateArray.height) - (ageMultiplier * this.props.stateArray.age);
+        switch(this.props.stateArray.activityLevel){
+            case "sedentary":
+                activityMultiplier = 1.2;
+                break;
+            case "light":
+                activityMultiplier = 1.375;
+                break;
+            case "moderate":
+                activityMultiplier = 1.55;
+                break;
+            case "very":
+                activityMultiplier = 1.725;
+                break;
+            default:
+                activityMultiplier = 0;
+        }
+        calculatedValue = (genderMultiplier + (weightMultiplier * this.props.stateArray.weight) + (heightMultiplier * this.props.stateArray.height) - (ageMultiplier * this.props.stateArray.age)) * activityMultiplier;
         return calculatedValue;
     }
     render() {
