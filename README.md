@@ -1,6 +1,6 @@
 # Health Calculator
 
-Health Calculator is a tool designed to help users calculate their total daily energy expenditure
+Health Calculator is a tool designed to help users calculate their total daily energy expenditure (TDEE)
 using the Harris-Benedict equation.
 
 ## Getting started
