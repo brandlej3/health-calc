@@ -98,7 +98,7 @@ class App extends Component {
             </Col>
           </Row>
           <Row>
-            <Col bsStyle="footer" xs={12} md={12}>
+            <Col xs={12} md={12}>
               <Button bsStyle="primary submit" type="submit">Calculate</Button>
             </Col>
             {this.state.clicked ? this.renderCalorieDisplay() : ""}
