@@ -90,16 +90,16 @@ class App extends Component {
             <Col xs={12} md={12}>
               <h4>Activity Level</h4>
                 <div onClick= {this.handleActivityLevel}>
-                  <div className="activity-grid" id="sedentary">1</div>
-                  <div className="activity-grid" id="light">2</div>
-                  <div className="activity-grid" id="moderate">3</div>
-                  <div className="activity-grid" id="very">4</div>
+                  <div className="activity-grid" id="sedentary"></div>
+                  <div className="activity-grid" id="light"></div>
+                  <div className="activity-grid" id="moderate"></div>
+                  <div className="activity-grid" id="very"></div>
                 </div>
             </Col>
           </Row>
           <Row>
-            <Col xs={12} md={12}>
-              <Button type="submit">Calculate !</Button>
+            <Col bsStyle="footer" xs={12} md={12}>
+              <Button bsStyle="primary submit" type="submit">Calculate</Button>
             </Col>
             {this.state.clicked ? this.renderCalorieDisplay() : ""}
           </Row>

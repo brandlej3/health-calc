@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Display.css';
 
 export class CalorieDisplay extends React.Component {
