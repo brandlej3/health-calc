@@ -63,8 +63,8 @@ class App extends Component {
             <Col xs={12} md={12}>
                   <h3 className="gender-group">Gender</h3>
                   <div onClick={this.handleGender} className="gender-group">
-                    <div id="male"></div>
-                    <div id="female"></div>
+                    <div className={this.state.gender === "male" ? 'selected' : ''} id="male"></div>
+                    <div className={this.state.gender === "female" ? 'selected' : ''} id="female"></div>
                   </div>
             </Col>
           </Row>
@@ -90,10 +90,10 @@ class App extends Component {
             <Col xs={12} md={12}>
               <h4>Activity Level</h4>
                 <div onClick= {this.handleActivityLevel}>
-                  <div className="activity-grid" id="sedentary"></div>
-                  <div className="activity-grid" id="light"></div>
-                  <div className="activity-grid" id="moderate"></div>
-                  <div className="activity-grid" id="very"></div>
+                  <div className={this.state.activityLevel === "sedentary" ? 'activity-grid selected' : 'activity-grid'} id="sedentary"></div>
+                  <div className={this.state.activityLevel === "light" ? 'activity-grid selected' : 'activity-grid'} id="light"></div>
+                  <div className={this.state.activityLevel === "moderate" ? 'activity-grid selected' : 'activity-grid'} id="moderate"></div>
+                  <div className={this.state.activityLevel === "very" ? 'activity-grid selected' : 'activity-grid'} id="very"></div>
                 </div>
             </Col>
           </Row>

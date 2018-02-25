@@ -11,6 +11,11 @@
   font-family: 'Bebas_bold';
   font-size: 3.15em;
   letter-spacing: .05em;
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer */
+  -khtml-user-select: none; /* KHTML browsers (e.g. Konqueror) */
+  -webkit-user-select: none; /* Chrome, Safari, and Opera */
+  -webkit-touch-callout: none; /* Disable Android and iOS callouts*/
 }
 @font-face {
   font-family: 'Bebas_bold';
@@ -63,7 +68,7 @@ h3 {
 }
 .activity-grid {
   float: left;
-  width: 48%;
+  width: 40%;
   height: 4em;
 }
 #sedentary {
@@ -105,9 +110,13 @@ h4 {
   display : block;
   border: 0;
   box-shadow: none;
-  border-radius: 0.05sem;
+  border-radius: 0.05em;
   background: -webkit-gradient(linear, left top, left bottom, from(#faa51a), to(#f47a20));
   background: -moz-linear-gradient(top,  #faa51a,  #f47a20);
+}
+.selected {
+  border: 2px solid #e67e22;
+  outline: 0 none;
 }
 .submit:hover {
 	background: #f47c20;
