@@ -19,7 +19,7 @@ npm run build
 ## Development
 
 Ongoing development; targeting: 
-    - Organize file structure
-    - Macro-nutrient breakdown
-    - Keto-lifestyle breakdown
-    - Run against test cases
+- Organize file structure
+- Macro-nutrient breakdown
+- Keto-lifestyle breakdown
+- Run against test cases
