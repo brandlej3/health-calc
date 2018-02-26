@@ -3,6 +3,7 @@ import './App.css';
 import { Modal, Button, Grid, Row, Col, Jumbotron } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import { CalorieDisplay } from './Display.js';
+import Display from './CalcDisplay.js';
 
 class App extends Component {
   state = {
@@ -93,7 +94,7 @@ class App extends Component {
           </Row>
           <Row>
             <Col xs={12} md={12}>
-              <h2 className="subheader-text">Calculator to see how much you should eat everyday.</h2>
+              <h2 className="subheader-text">Calculator to see how much you should eat everyday</h2>
               <p className="sub-subheader-text">Consult a doctor before making any extreme changes</p>
             </Col>
           </Row>
@@ -140,6 +141,11 @@ class App extends Component {
               <Button bsStyle="primary submit" type="submit">Calculate</Button>
             </Col>
             {this.state.clicked ? this.renderCalorieDisplay() : ""}
+          </Row>
+          <Row>
+            <Col xs={12} md={12}>
+              < Display value="2222"/>
+            </Col>
           </Row>
         </Grid>
         

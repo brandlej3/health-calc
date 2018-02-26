@@ -1,0 +1,8 @@
+.display {
+    font-family: 'Bebas_bold';
+    font-size: 5em;
+    text-align: center;
+    letter-spacing: .05em;
+    border: 2px dotted #E97E21;
+    background: #eee none repeat scroll 0 0;
+}
