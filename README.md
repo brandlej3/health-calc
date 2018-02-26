@@ -3,6 +3,8 @@
 Health Calculator is a tool designed to help users calculate their total daily energy expenditure (TDEE)
 using the Harris-Benedict equation.
 
+![Screenshot](reposcreenshot.PNG)
+
 ## Getting started
 
 To get started:
