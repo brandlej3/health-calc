@@ -1,5 +1,6 @@
 import React from 'react';
 import './Display.css';
+import { Calorie } from './CalcDisplay/CalcDisplay';
 
 export class CalorieDisplay extends React.Component {
     calculateTdee()  {
@@ -44,7 +45,7 @@ export class CalorieDisplay extends React.Component {
     render() {
       return (
         <div>
-            <p>{this.calculateTdee()}</p>
+            <Calorie value={this.calculateTdee()} />
         </div>
       );
     }

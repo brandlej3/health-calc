@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import { Modal, Button, Grid, Row, Col, Jumbotron } from 'react-bootstrap';
 import PropTypes from 'prop-types';
-import { CalorieDisplay } from './Display.js';
-import Display from './CalcDisplay.js';
+import { CalorieDisplay } from './../Display/Display.js';
 
 class App extends Component {
   state = {
@@ -140,11 +139,10 @@ class App extends Component {
             <Col xs={12} md={12}>
               <Button bsStyle="primary submit" type="submit">Calculate</Button>
             </Col>
-            {this.state.clicked ? this.renderCalorieDisplay() : ""}
           </Row>
           <Row>
             <Col xs={12} md={12}>
-              < Display value="2222"/>
+              {this.state.clicked ? this.renderCalorieDisplay() : ""}
             </Col>
           </Row>
         </Grid>

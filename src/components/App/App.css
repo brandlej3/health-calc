@@ -43,11 +43,11 @@
 }
 @font-face {
   font-family: 'Bebas_bold';
-  src: url("./Bebas_bold.otf") format("opentype");
+  src: url("./../../assets/fonts/Bebas_bold.otf") format("opentype");
 }
 @font-face {
   font-family: 'Bebas_regular';
-  src: url("./Bebas_regular.otf") format("opentype");
+  src: url("./../../assets/fonts/Bebas_regular.otf") format("opentype");
 }
 .gender, .weightGrouping, .ageGrouping, .activityGrouping, .heightGrouping {
   margin-bottom: 2em;
@@ -61,14 +61,14 @@
   align-items:center;
   justify-content: center;
   border-radius: 0.5em;
-  background: url('./bannerImage2.jpg') no-repeat center center;
+  background: url('./../../assets/images/bannerImage2.jpg') no-repeat center center;
 }
 #male {
   background-color: red;
   width: 4em;
   display: inline-block;
   height: 4em;
-  background: url('./malepic.png') no-repeat center center;
+  background: url('./../../assets/images/malepic.png') no-repeat center center;
 }
 .gender-group{
   display: inline-block;
@@ -85,7 +85,7 @@ h3 {
   width: 4em;
   display: inline-block;
   height: 4em;
-  background: url('./femalepic.png') no-repeat center center;
+  background: url('./../../assets/images/femalepic.png') no-repeat center center;
 }
 .input-labels {
   display: inline-block;
@@ -98,14 +98,14 @@ h3 {
   height: 4em;
 }
 #sedentary {
-  background: url('./littlepic.png') no-repeat center center;
+  background: url('./../../assets/images/littlepic.png') no-repeat center center;
   position:relative;
 }
 #light {
-  background: url('./lightpic.png') no-repeat center center;
+  background: url('./../../assets/images/lightpic.png') no-repeat center center;
 }
 #moderate {
-  background: url('./moderatepic.png') no-repeat center center;
+  background: url('./../../assets/images/moderatepic.png') no-repeat center center;
 }
 input {
   background: #eee none repeat scroll 0 0;
@@ -119,7 +119,7 @@ input:focus {
   outline: 0 none;
 }
 #very {
-  background: url('./verypic.png') no-repeat center center;
+  background: url('./../../assets/images/verypic.png') no-repeat center center;
   height: 3em;
 }
 h4 { 
