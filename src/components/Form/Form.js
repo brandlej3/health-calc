@@ -83,7 +83,7 @@ state = {
     render() {
         return (
             <form onSubmit={ this.handleCalculate }>
-                <Grid bsClass="grid-body">
+                <Grid bsClass="formgrid">
                     <Row>
                         <Col xs={12} md={12}>
                             <Jumbotron bsClass="jumbotron">
