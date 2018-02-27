@@ -22,6 +22,6 @@ npm run build
 
 Ongoing development; targeting:
 - Input validation
+- Run against test cases and Make CSS follow BEM
 - Macro-nutrient breakdown
 - Keto-lifestyle breakdown
-- Run against test cases

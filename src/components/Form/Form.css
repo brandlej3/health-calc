@@ -1,0 +1,158 @@
+.grid-body {
+    margin: auto;
+    width: 57%;
+  }
+@media only screen and (max-width: 500px) {
+  body {
+    width: 100%;
+  }
+}
+
+.header-text {
+  font-family: 'Bebas_bold';
+  font-size: 3.15em;
+  letter-spacing: .05em;
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer */
+  -khtml-user-select: none; /* KHTML browsers (e.g. Konqueror) */
+  -webkit-user-select: none; /* Chrome, Safari, and Opera */
+  -webkit-touch-callout: none; /* Disable Android and iOS callouts*/
+}
+.subheader-text {
+  font-family: 'Bebas_regular';
+  font-size: 2em;
+  text-align: center;
+  letter-spacing: .05em;
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer */
+  -khtml-user-select: none; /* KHTML browsers (e.g. Konqueror) */
+  -webkit-user-select: none; /* Chrome, Safari, and Opera */
+  -webkit-touch-callout: none; /* Disable Android and iOS callouts*/
+}
+.sub-subheader-text {
+  font-family: 'Bebas_regular';
+  font-size: 2em;
+  text-align: center;
+  color: #919191;
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer */
+  -khtml-user-select: none; /* KHTML browsers (e.g. Konqueror) */
+  -webkit-user-select: none; /* Chrome, Safari, and Opera */
+  -webkit-touch-callout: none; /* Disable Android and iOS callouts*/
+  margin-bottom: 1em;
+}
+@font-face {
+  font-family: 'Bebas_bold';
+  src: url("./../../assets/fonts/Bebas_bold.otf") format("opentype");
+}
+@font-face {
+  font-family: 'Bebas_regular';
+  src: url("./../../assets/fonts/Bebas_regular.otf") format("opentype");
+}
+.gender, .weightGrouping, .ageGrouping, .activityGrouping, .heightGrouping {
+  margin-bottom: 2em;
+}
+.jumbotron {
+  color: white;
+  text-align: center;
+  height: 8.5em;
+  display:flex;
+  align-content:center;
+  align-items:center;
+  justify-content: center;
+  border-radius: 0.5em;
+  background: url('./../../assets/images/bannerImage2.jpg') no-repeat center center;
+}
+#male {
+  background-color: red;
+  width: 4em;
+  display: inline-block;
+  height: 4em;
+  background: url('./../../assets/images/malepic.png') no-repeat center center;
+}
+.gender-group{
+  display: inline-block;
+  color: #A1A1A1;
+  padding-right: 3em;
+}
+h3 {
+  display: inline-block;
+  width: 4em;
+  font-family: 'Bebas_regular';
+  letter-spacing: .08em;
+}
+#female {
+  width: 4em;
+  display: inline-block;
+  height: 4em;
+  background: url('./../../assets/images/femalepic.png') no-repeat center center;
+}
+.input-labels {
+  display: inline-block;
+  padding-right: 3em;
+  color: #A1A1A1;
+}
+.activity-grid {
+  float: left;
+  width: 40%;
+  height: 4em;
+}
+#sedentary {
+  background: url('./../../assets/images/littlepic.png') no-repeat center center;
+  position:relative;
+}
+#light {
+  background: url('./../../assets/images/lightpic.png') no-repeat center center;
+}
+#moderate {
+  background: url('./../../assets/images/moderatepic.png') no-repeat center center;
+}
+input {
+  background: #eee none repeat scroll 0 0;
+  border: 2px solid #eee;
+  border-radius: 3px;
+  padding: 15px 0;
+  text-align: center;
+}
+input:focus {
+  border: 2px solid #e67e22;
+  outline: 0 none;
+}
+#very {
+  background: url('./../../assets/images/verypic.png') no-repeat center center;
+  height: 3em;
+}
+h4 { 
+  color: #A1A1A1;
+  font-family: 'Bebas_regular';
+  letter-spacing: .08em;
+  font-size: 1.55em;
+  margin-top: 1em;
+}
+.submit {
+  font-family: 'Bebas_bold';
+  letter-spacing: .08em;
+  font-size: 1.55em;
+  margin  : 0.10em auto;
+  margin-bottom: 1.25em;
+  display : block;
+  border: 0;
+  box-shadow: none;
+  border-radius: 0.05em;
+  background: -webkit-gradient(linear, left top, left bottom, from(#faa51a), to(#f47a20));
+  background: -moz-linear-gradient(top,  #faa51a,  #f47a20);
+}
+.selected {
+  border: 2px solid #e67e22;
+  outline: 0 none;
+}
+.submit:hover {
+    background: #f47c20;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f88e11), to(#f06015));
+    background: -moz-linear-gradient(top,  #f88e11,  #f06015);
+}
+.submit:active {
+    color: #fcd3a5;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f47a20), to(#faa51a));
+    background: -moz-linear-gradient(top,  #f47a20,  #faa51a);
+}
