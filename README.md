@@ -20,10 +20,8 @@ npm run build
 
 ## Development
 
-Ongoing development; targeting: 
-- Organize file structure
+Ongoing development; targeting:
 - Input validation
-- Calorie display design
 - Macro-nutrient breakdown
 - Keto-lifestyle breakdown
 - Run against test cases
