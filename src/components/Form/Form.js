@@ -14,13 +14,14 @@ state = {
     height: null,
     age: 0,
     activityLevel: null,
-    genderError: null
+    genderError: null,
+    activityError: null
     }
 
     //end initial doc
     handleCalculate = (e) => {
         e.preventDefault();
-        if(this.validateGenderActivityNotEmpty() === true)
+        if(this.validateGenderNotEmpty() === true && this.validateActivityNotEmpty() === true)
         {
             this.setState({
                 clicked: true,
@@ -30,9 +31,19 @@ state = {
             });
         }
     }
-    validateGenderActivityNotEmpty = () =>
+    validateActivityNotEmpty = () =>
     {
-        if(this.state.gender === null || this.state.activityLevel === null)
+        if(this.state.activityLevel === null)
+        {
+            this.setState({activityError: true});
+            return false;
+        }
+        this.setState({activityError: null});
+        return true;
+    }
+    validateGenderNotEmpty = () =>
+    {
+        if(this.state.gender === null)
         {
             this.setState({genderError: true});
             return false;
@@ -89,7 +100,7 @@ state = {
     handleHover = (e) => {
         var modalContent = "";
 
-        switch(e.target.id){
+        switch(e.target.className){
             case "sedentary":
             modalContent = "Choose this if day-to-day you are typically sitting, or not active.";
             break;
@@ -159,11 +170,12 @@ state = {
                         <Col className="activityGrouping" xs={12} md={12}>
                             <h4>Activity Level</h4>
                             <div onClick= {this.handleActivityLevel}>
-                            <div onClick={this.handleHover} className={this.state.activityLevel === "sedentary" ? 'activity-grid selected' : 'activity-grid'} id="sedentary"></div>
-                            <div onClick={this.handleHover} className={this.state.activityLevel === "light" ? 'activity-grid selected' : 'activity-grid'} id="light"></div>
-                            <div onClick={this.handleHover} className={this.state.activityLevel === "moderate" ? 'activity-grid selected' : 'activity-grid'} id="moderate"></div>
-                            <div onClick={this.handleHover} className={this.state.activityLevel === "very" ? 'activity-grid selected' : 'activity-grid'} id="very"></div>
+                                <div className={this.state.activityLevel === "sedentary" ? 'activity-grid selected' : 'activity-grid'} id="sedentary"><img className="sedentary" onClick={this.handleHover} alt="info" height="20em" width="20em" src={require("./infoIcon.png")} /></div>
+                                <div className={this.state.activityLevel === "light" ? 'activity-grid selected' : 'activity-grid'} id="light"><img className="light" onClick={this.handleHover} alt="info" height="20em" width="20em" src={require("./infoIcon.png")} /></div>
+                                <div className={this.state.activityLevel === "moderate" ? 'activity-grid selected' : 'activity-grid'} id="moderate"><img className="moderate" onClick={this.handleHover} alt="info" height="20em" width="20em" src={require("./infoIcon.png")} /></div>
+                                <div className={this.state.activityLevel === "very" ? 'activity-grid selected' : 'activity-grid'} id="very"><img className="very" onClick={this.handleHover} alt="info" height="20em" width="20em" src={require("./infoIcon.png")} /></div>
                             </div>
+                            {this.state.activityError ? <span>Please choose your activity level!</span> : null}
                         </Col>
                     </Row>
                     <Row>
