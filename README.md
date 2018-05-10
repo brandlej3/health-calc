@@ -21,6 +21,5 @@ npm run build
 ## Development
 
 Ongoing development; targeting:
-- Input validation
-- Macro-nutrient breakdown
-- Keto-lifestyle breakdown
+- tests
+- code cleanup
