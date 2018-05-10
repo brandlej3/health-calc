@@ -13,18 +13,32 @@ state = {
     weight: null,
     height: null,
     age: 0,
-    activityLevel: null
+    activityLevel: null,
+    genderError: null
     }
 
     //end initial doc
     handleCalculate = (e) => {
         e.preventDefault();
-        this.setState({
-            clicked: true,
-            weight: parseInt(e.target.weight.value, 10),
-            height: parseInt(e.target.height.value, 10),
-            age: parseInt(e.target.age.value, 10)
-        });
+        if(this.validateGenderActivityNotEmpty() === true)
+        {
+            this.setState({
+                clicked: true,
+                weight: parseInt(e.target.weight.value, 10),
+                height: parseInt(e.target.height.value, 10),
+                age: parseInt(e.target.age.value, 10)
+            });
+        }
+    }
+    validateGenderActivityNotEmpty = () =>
+    {
+        if(this.state.gender === null || this.state.activityLevel === null)
+        {
+            this.setState({genderError: true});
+            return false;
+        }
+        this.setState({genderError: null});
+        return true;
     }
     validateAge = (e) =>
     {
@@ -119,25 +133,26 @@ state = {
                             <div onClick={this.handleGender} className="gender-group">
                                 <div className={this.state.gender === "male" ? 'selected' : ''} id="male"></div>
                                 <div className={this.state.gender === "female" ? 'selected' : ''} id="female"></div>
+                                {this.state.genderError ? <span>Please choose your gender!</span> : null}
                             </div>
                         </Col>
                     </Row>
                     <Row>
                         <Col className="weightGrouping" xs={12} md={12}>
                             <h3 className="input-labels">Weight</h3>
-                            <input name="weight" type="number" onKeyUp={this.validateNumber}></input>
+                            <input name="weight" type="number" onKeyUp={this.validateNumber} required></input>
                         </Col>
                     </Row>
                     <Row>
                         <Col className="heightGrouping" xs={12} md={12}>
                             <h3 className="input-labels">Height</h3>
-                            <input name="height" type="number" onKeyUp={this.validateHeight}></input>
+                            <input name="height" type="number" onKeyUp={this.validateHeight} required></input>
                         </Col>
                     </Row>
                     <Row>
                         <Col className="ageGrouping" xs={12} md={12}>
                             <h3 className="input-labels">Age</h3>
-                            <input name="age" type="number" onKeyUp={this.validateAge}></input>
+                            <input name="age" type="number" onKeyUp={this.validateAge} required></input>
                         </Col>
                     </Row>
                     <Row>
