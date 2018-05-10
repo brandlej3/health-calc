@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './Form.css';
 import { Button, Grid, Row, Col, Jumbotron } from 'react-bootstrap';
-import PropTypes from 'prop-types';
 import { CalorieDisplay } from './../Display/Display.js';
 import { ActivityModal } from './ActivityModal/ActivityModal.js';
 
@@ -16,31 +15,48 @@ state = {
     age: 0,
     activityLevel: null
     }
-    static propTypes = {
-    clicked: PropTypes.bool,
-    gender: PropTypes.string,
-    weight: PropTypes.number,
-    height: PropTypes.number,
-    age: PropTypes.number,
-    activityLevel: PropTypes.string
-    }
-    static defaultProps = {
-    clicked: false,
-    gender: "",
-    weight: 0,
-    height: 0,
-    age: 0,
-    activityLevel: ""
-    }
+
     //end initial doc
     handleCalculate = (e) => {
-    e.preventDefault();
-    this.setState({
-        clicked: true,
-        weight: parseInt(e.target.weight.value, 10),
-        height: parseInt(e.target.height.value, 10),
-        age: parseInt(e.target.age.value, 10)
-    });
+        e.preventDefault();
+        this.setState({
+            clicked: true,
+            weight: parseInt(e.target.weight.value, 10),
+            height: parseInt(e.target.height.value, 10),
+            age: parseInt(e.target.age.value, 10)
+        });
+    }
+    validateAge = (e) =>
+    {
+        if(this.validateNumber(e) === true)
+        {
+            var inputValue = Number.parseInt(e.target.value, 10);
+            if(inputValue > 96 || inputValue === 0 )
+            {
+                e.target.value = "";
+            }
+        }
+    }
+    validateHeight = (e) =>
+    {
+        if(this.validateNumber(e) === true)
+        {
+            var inputValue = Number.parseInt(e.target.value, 10);
+            if(inputValue > 96)
+            {
+                e.target.value = "";
+            }
+        }
+    }
+    validateNumber = (e) =>
+    {
+        var inputValue = e.target.value.match(/^\d+$/);;
+        if(inputValue == null || Number.parseInt(inputValue, 10) >= 600)
+        {
+            e.target.value = "";
+            return false
+        }
+        return true
     }
     handleGender = (e) => {
         e.target.id === "male" ? this.setState({ gender : "male" }) : this.setState({ gender : "female" });
@@ -109,19 +125,19 @@ state = {
                     <Row>
                         <Col className="weightGrouping" xs={12} md={12}>
                             <h3 className="input-labels">Weight</h3>
-                            <input name="weight" type="number"></input>
+                            <input name="weight" type="number" onKeyUp={this.validateNumber}></input>
                         </Col>
                     </Row>
                     <Row>
                         <Col className="heightGrouping" xs={12} md={12}>
                             <h3 className="input-labels">Height</h3>
-                            <input name="height" type="number"></input>
+                            <input name="height" type="number" onKeyUp={this.validateHeight}></input>
                         </Col>
                     </Row>
                     <Row>
                         <Col className="ageGrouping" xs={12} md={12}>
                             <h3 className="input-labels">Age</h3>
-                            <input name="age" type="number"></input>
+                            <input name="age" type="number" onKeyUp={this.validateAge}></input>
                         </Col>
                     </Row>
                     <Row>
