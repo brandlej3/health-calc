@@ -3,6 +3,7 @@ import './Form.css';
 import { Button, Grid, Row, Col, Jumbotron } from 'react-bootstrap';
 import { CalorieDisplay } from './../Display/Display.js';
 import { ActivityModal } from './ActivityModal/ActivityModal.js';
+import  Util from './../../helpers/util.js';
 
 export class Form extends Component {
 state = {
@@ -18,7 +19,6 @@ state = {
     activityError: null
     }
 
-    //end initial doc
     handleCalculate = (e) => {
         e.preventDefault();
         if(this.validateGenderNotEmpty() === true && this.validateActivityNotEmpty() === true)
@@ -53,10 +53,10 @@ state = {
     }
     validateAge = (e) =>
     {
-        if(this.validateNumber(e) === true)
+        if(Util.validateNumber(e) === true)
         {
             var inputValue = Number.parseInt(e.target.value, 10);
-            if(inputValue > 96 || inputValue === 0 )
+            if(inputValue > 96 || inputValue === 0 ) //limit age to 96
             {
                 e.target.value = "";
             }
@@ -64,24 +64,14 @@ state = {
     }
     validateHeight = (e) =>
     {
-        if(this.validateNumber(e) === true)
+        if(Util.validateNumber(e) === true)
         {
             var inputValue = Number.parseInt(e.target.value, 10);
-            if(inputValue > 96)
+            if(inputValue > 96) //limit height to 98 in.
             {
                 e.target.value = "";
             }
         }
-    }
-    validateNumber = (e) =>
-    {
-        var inputValue = e.target.value.match(/^\d+$/);;
-        if(inputValue == null || Number.parseInt(inputValue, 10) >= 600)
-        {
-            e.target.value = "";
-            return false
-        }
-        return true
     }
     handleGender = (e) => {
         e.target.id === "male" ? this.setState({ gender : "male" }) : this.setState({ gender : "female" });
@@ -151,7 +141,7 @@ state = {
                     <Row>
                         <Col className="weightGrouping" xs={12} md={12}>
                             <h3 className="input-labels">Weight</h3>
-                            <input name="weight" type="number" onKeyUp={this.validateNumber} required></input>
+                            <input name="weight" type="number" onKeyUp={Util.validateNumber} required></input>
                         </Col>
                     </Row>
                     <Row>
