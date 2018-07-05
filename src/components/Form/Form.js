@@ -160,10 +160,10 @@ state = {
                         <Col className="activityGrouping" xs={12} md={12}>
                             <h4>Activity Level</h4>
                             <div onClick= {this.handleActivityLevel}>
-                                <div className={this.state.activityLevel === "sedentary" ? 'activity-grid selected' : 'activity-grid'} id="sedentary"><img className="sedentary" onClick={this.handleHover} alt="info" height="20em" width="20em" src={require("./infoIcon.png")} /></div>
-                                <div className={this.state.activityLevel === "light" ? 'activity-grid selected' : 'activity-grid'} id="light"><img className="light" onClick={this.handleHover} alt="info" height="20em" width="20em" src={require("./infoIcon.png")} /></div>
-                                <div className={this.state.activityLevel === "moderate" ? 'activity-grid selected' : 'activity-grid'} id="moderate"><img className="moderate" onClick={this.handleHover} alt="info" height="20em" width="20em" src={require("./infoIcon.png")} /></div>
-                                <div className={this.state.activityLevel === "very" ? 'activity-grid selected' : 'activity-grid'} id="very"><img className="very" onClick={this.handleHover} alt="info" height="20em" width="20em" src={require("./infoIcon.png")} /></div>
+                                <div className={this.state.activityLevel === "sedentary" ? 'activity-grid selected' : 'activity-grid'} id="sedentary"><img className="sedentary" onClick={this.handleHover} alt="info" height="20em" width="20em" src={require("./../../assets/images/infoIcon.png")} /></div>
+                                <div className={this.state.activityLevel === "light" ? 'activity-grid selected' : 'activity-grid'} id="light"><img className="light" onClick={this.handleHover} alt="info" height="20em" width="20em" src={require("./../../assets/images/infoIcon.png")} /></div>
+                                <div className={this.state.activityLevel === "moderate" ? 'activity-grid selected' : 'activity-grid'} id="moderate"><img className="moderate" onClick={this.handleHover} alt="info" height="20em" width="20em" src={require("./../../assets/images/infoIcon.png")} /></div>
+                                <div className={this.state.activityLevel === "very" ? 'activity-grid selected' : 'activity-grid'} id="very"><img className="very" onClick={this.handleHover} alt="info" height="20em" width="20em" src={require("./../../assets/images/infoIcon.png")} /></div>
                             </div>
                             {this.state.activityError ? <span>Please choose your activity level!</span> : null}
                         </Col>
