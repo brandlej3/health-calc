@@ -1,7 +1,11 @@
 import React from 'react';
 import './App.css';
-import Container from './../Container/Container';
+import Form from './../Form/Form';
+import Header from './../Header/Header';
 export const App = () =>
   (
-    < Container />
+    <div>
+      < Header />
+      < Form />
+    </div>
   )
