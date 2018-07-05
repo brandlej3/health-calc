@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import Form from './../Form/Form.js';
+import Container from './../Container/Container';
 export const App = () =>
   (
-    < Form />
+    < Container />
   )

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Form.css';
-import { Button, Grid, Row, Col, Jumbotron } from 'react-bootstrap';
+import { Button, Grid, Row, Col } from 'react-bootstrap';
 import { CalorieDisplay } from './../Display/Display.js';
 import { ActivityModal } from './ActivityModal/ActivityModal.js';
 import  Util from './../../helpers/util.js';
@@ -116,19 +116,6 @@ state = {
         return (
             <form onSubmit={ this.handleCalculate }>
                 <Grid bsClass="formgrid">
-                    <Row>
-                        <Col xs={12} md={12}>
-                            <Jumbotron bsClass="jumbotron">
-                                <h1 className="header-text">Calorie Calculator</h1>
-                            </Jumbotron>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col xs={12} md={12}>
-                            <h2 className="subheader-text">Calculator to see how much you should eat everyday</h2>
-                            <p className="sub-subheader-text">Consult a doctor before making any extreme changes</p>
-                        </Col>
-                    </Row>
                     <Row>
                         <Col className="gender" xs={12} md={12}>
                             <h3 className="gender-group">Gender</h3>
