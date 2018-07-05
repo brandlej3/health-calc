@@ -20,6 +20,5 @@ npm run build
 
 ## Development
 
-Ongoing development; targeting:
-- tests
-- code cleanup
+TODO:
+Make it so on successful submission the form transitions to calorie display rather than it being appended to the bottom
