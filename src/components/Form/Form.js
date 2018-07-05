@@ -29,6 +29,7 @@ state = {
                 height: parseInt(e.target.height.value, 10),
                 age: parseInt(e.target.age.value, 10)
             });
+            window.scrollTo(0,0);
         }
     }
     validateActivityNotEmpty = () =>
