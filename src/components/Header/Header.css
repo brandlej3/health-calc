@@ -1,3 +1,15 @@
+.jumbotron {
+    color: white;
+    text-align: center;
+    height: 8.5em;
+    display:flex;
+    align-content:center;
+    align-items:center;
+    justify-content: center;
+    border-radius: 0.5em;
+    background: url('./../../assets/images/bannerImage2.jpg') no-repeat center center;
+  }
+  
 .header-text {
     font-family: 'Bebas_bold';
     font-size: 3.15em;

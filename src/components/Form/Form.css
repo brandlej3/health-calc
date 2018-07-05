@@ -40,50 +40,7 @@ input:focus {
   border: 2px solid #e67e22;
   outline: 0 none;
 }
-.jumbotron {
-  color: white;
-  text-align: center;
-  height: 8.5em;
-  display:flex;
-  align-content:center;
-  align-items:center;
-  justify-content: center;
-  border-radius: 0.5em;
-  background: url('./../../assets/images/bannerImage2.jpg') no-repeat center center;
-}
-.header-text {
-  font-family: 'Bebas_bold';
-  font-size: 3.15em;
-  letter-spacing: .05em;
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* Internet Explorer */
-  -khtml-user-select: none; /* KHTML browsers (e.g. Konqueror) */
-  -webkit-user-select: none; /* Chrome, Safari, and Opera */
-  -webkit-touch-callout: none; /* Disable Android and iOS callouts*/
-}
-.subheader-text {
-  font-family: 'Bebas_regular';
-  font-size: 2em;
-  text-align: center;
-  letter-spacing: .05em;
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* Internet Explorer */
-  -khtml-user-select: none; /* KHTML browsers (e.g. Konqueror) */
-  -webkit-user-select: none; /* Chrome, Safari, and Opera */
-  -webkit-touch-callout: none; /* Disable Android and iOS callouts*/
-}
-.sub-subheader-text {
-  font-family: 'Bebas_regular';
-  font-size: 2em;
-  text-align: center;
-  color: #919191;
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* Internet Explorer */
-  -khtml-user-select: none; /* KHTML browsers (e.g. Konqueror) */
-  -webkit-user-select: none; /* Chrome, Safari, and Opera */
-  -webkit-touch-callout: none; /* Disable Android and iOS callouts*/
-  margin-bottom: 1em;
-}
+
 @font-face {
   font-family: 'Bebas_bold';
   src: url("./../../assets/fonts/Bebas_bold.otf") format("opentype");
