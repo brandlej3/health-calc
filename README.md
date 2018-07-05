@@ -20,5 +20,9 @@ npm run build
 
 ## Development
 
-TODO:
-Make it so on successful submission the form transitions to calorie display rather than it being appended to the bottom
+TODO(S):
+- (Fit & Finish) Make it so on successful submission the form transitions to calorie display rather than it being appended to the bottom.
+- (Feature) Macronutrient breakdown
+    - mockups
+    - architecture
+    - implement
