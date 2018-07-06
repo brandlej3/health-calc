@@ -113,65 +113,65 @@ state = {
         });
     }
     render() {
-        return (
-            <form onSubmit={ this.handleCalculate }>
-                <Grid bsClass="formgrid">
-                    <Row>
-                        <Col className="gender" xs={12} md={12}>
-                            <h3 className="gender-group">Gender</h3>
-                            <div onClick={this.handleGender} className="gender-group">
-                                <div className={this.state.gender === "male" ? 'selected' : ''} id="male"></div>
-                                <div className={this.state.gender === "female" ? 'selected' : ''} id="female"></div>
-                                {this.state.genderError ? <span>Please choose your gender!</span> : null}
-                            </div>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col className="weightGrouping" xs={12} md={12}>
-                            <h3 className="input-labels">Weight</h3>
-                            <input name="weight" type="number" onKeyUp={Util.validateNumber} required></input>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col className="heightGrouping" xs={12} md={12}>
-                            <h3 className="input-labels">Height</h3>
-                            <input name="height" type="number" onKeyUp={this.validateHeight} required></input>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col className="ageGrouping" xs={12} md={12}>
-                            <h3 className="input-labels">Age</h3>
-                            <input name="age" type="number" onKeyUp={this.validateAge} required></input>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col className="activityGrouping" xs={12} md={12}>
-                            <h4>Activity Level</h4>
-                            <div onClick= {this.handleActivityLevel}>
-                                <div className={this.state.activityLevel === "sedentary" ? 'activity-grid selected' : 'activity-grid'} id="sedentary"><img className="sedentary" onClick={this.handleHover} alt="info" height="20em" width="20em" src={require("./../../assets/images/infoIcon.png")} /></div>
-                                <div className={this.state.activityLevel === "light" ? 'activity-grid selected' : 'activity-grid'} id="light"><img className="light" onClick={this.handleHover} alt="info" height="20em" width="20em" src={require("./../../assets/images/infoIcon.png")} /></div>
-                                <div className={this.state.activityLevel === "moderate" ? 'activity-grid selected' : 'activity-grid'} id="moderate"><img className="moderate" onClick={this.handleHover} alt="info" height="20em" width="20em" src={require("./../../assets/images/infoIcon.png")} /></div>
-                                <div className={this.state.activityLevel === "very" ? 'activity-grid selected' : 'activity-grid'} id="very"><img className="very" onClick={this.handleHover} alt="info" height="20em" width="20em" src={require("./../../assets/images/infoIcon.png")} /></div>
-                            </div>
-                            {this.state.activityError ? <span>Please choose your activity level!</span> : null}
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col xs={12} md={12}>
-                            <Button bsStyle="primary submit" type="submit">Calculate</Button>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col xs={12} md={12}>
-                            {this.state.clicked ? this.renderCalorieDisplay() : ""}
-                        </Col>
-                    </Row>
-                </Grid>
-                
-                <ActivityModal toggleActive={this.state.showToggle} activeLvl={this.state.activityLevel} coreContent={this.state.theContent} onMouseOut={()=> this.handleMouseOut()} />
-
-            </form>
-        );
+        if (this.state.clicked){
+            return this.renderCalorieDisplay();
+        } else {
+            return (
+                <form onSubmit={ this.handleCalculate }>
+                    <Grid bsClass="formgrid">
+                        <Row>
+                            <Col className="gender" xs={12} md={12}>
+                                <h3 className="gender-group">Gender</h3>
+                                <div onClick={this.handleGender} className="gender-group">
+                                    <div className={this.state.gender === "male" ? 'selected' : ''} id="male"></div>
+                                    <div className={this.state.gender === "female" ? 'selected' : ''} id="female"></div>
+                                    {this.state.genderError ? <span>Please choose your gender!</span> : null}
+                                </div>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col className="weightGrouping" xs={12} md={12}>
+                                <h3 className="input-labels">Weight</h3>
+                                <input name="weight" type="number" onKeyUp={Util.validateNumber} required></input>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col className="heightGrouping" xs={12} md={12}>
+                                <h3 className="input-labels">Height</h3>
+                                <input name="height" type="number" onKeyUp={this.validateHeight} required></input>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col className="ageGrouping" xs={12} md={12}>
+                                <h3 className="input-labels">Age</h3>
+                                <input name="age" type="number" onKeyUp={this.validateAge} required></input>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col className="activityGrouping" xs={12} md={12}>
+                                <h4>Activity Level</h4>
+                                <div onClick= {this.handleActivityLevel}>
+                                    <div className={this.state.activityLevel === "sedentary" ? 'activity-grid selected' : 'activity-grid'} id="sedentary"><img className="sedentary" onClick={this.handleHover} alt="info" height="20em" width="20em" src={require("./../../assets/images/infoIcon.png")} /></div>
+                                    <div className={this.state.activityLevel === "light" ? 'activity-grid selected' : 'activity-grid'} id="light"><img className="light" onClick={this.handleHover} alt="info" height="20em" width="20em" src={require("./../../assets/images/infoIcon.png")} /></div>
+                                    <div className={this.state.activityLevel === "moderate" ? 'activity-grid selected' : 'activity-grid'} id="moderate"><img className="moderate" onClick={this.handleHover} alt="info" height="20em" width="20em" src={require("./../../assets/images/infoIcon.png")} /></div>
+                                    <div className={this.state.activityLevel === "very" ? 'activity-grid selected' : 'activity-grid'} id="very"><img className="very" onClick={this.handleHover} alt="info" height="20em" width="20em" src={require("./../../assets/images/infoIcon.png")} /></div>
+                                </div>
+                                {this.state.activityError ? <span>Please choose your activity level!</span> : null}
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col xs={12} md={12}>
+                                <Button bsStyle="primary submit" type="submit">Calculate</Button>
+                            </Col>
+                        </Row>
+                    </Grid>
+                    
+                    <ActivityModal toggleActive={this.state.showToggle} activeLvl={this.state.activityLevel} coreContent={this.state.theContent} onMouseOut={()=> this.handleMouseOut()} />
+    
+                </form>
+            );
+        }
+        
     }
 }
 export default Form;

@@ -40,7 +40,7 @@ export class CalorieDisplay extends React.Component {
                 activityMultiplier = 0;
         }
         calculatedValue = (genderMultiplier + (weightMultiplier * this.props.stateArray.weight) + (heightMultiplier * this.props.stateArray.height) - (ageMultiplier * this.props.stateArray.age)) * activityMultiplier;
-        return calculatedValue;
+        return Math.round(calculatedValue);
     }
     render() {
       return (
