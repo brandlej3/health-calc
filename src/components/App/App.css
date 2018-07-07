@@ -1,0 +1,44 @@
+.tabs {
+    background-color: #fff;
+    border-color: #d8d8d8;
+    border-left-style: solid;
+    border-top: solid;
+    border-width: 2px;
+    margin-bottom: 2%;
+    color: #b5a8c5;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 600;
+    float: left;
+    padding: 0.625rem 1.25rem;
+    position: relative;
+    -webkit-transition: 0.1s ease-in-out;
+            transition: 0.1s ease-in-out;
+}
+.tabholder {
+    margin: auto;
+    width: 62%;
+}
+.tabs:last-of-type {
+    border-right-style: solid;
+  }
+.tabs::before, .tabs::after {
+    content: "";
+    display: block;
+    height: 4px;
+    position: absolute;
+    -webkit-transition: 0.1s ease-in-out;
+            transition: 0.1s ease-in-out;
+}
+.tabs::before {
+    background-color: #b5a8c5;
+    left: -2px;
+    right: -2px;
+    top: -2px;
+}
+.tabs::after {
+    background-color: transparent;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+}
