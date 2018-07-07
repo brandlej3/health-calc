@@ -132,7 +132,7 @@ state = {
             
         return (
             <div>
-                <img onClick={this.handleRefresh} title="Click to start over" alt="refreshicon" className="refresh" height="25em" width="25em" src={require("./../../assets/images/refresh.png")} /> <span className="startover">Start Over</span>
+                <div onClick={this.handleRefresh}><img title="Click to start over" alt="refreshicon" className="refresh" height="25em" width="25em" src={require("./../../assets/images/refresh.png")} /> <span title="Click to start over" className="startover">Start Over</span></div>
                 < CalorieDisplay stateArray={this.state} />
             </div>);
         } else {
