@@ -1,11 +1,17 @@
 import React from 'react';
 import './Macro.css';
 
-export const MacroDisplay = props => 
-    (
-        <div>
-            <p>Protein: 160g</p>
-            <p>Carbs: 200g</p>
-            <p>Fat: 80g</p>
-        </div>
-    );
+export class MacroDisplay extends React.Component{
+    render(){
+        return (
+            <div>
+                <div class="divWrap">
+                        <div class="left"></div>
+                        <div class="center"></div>
+                        <div class="right"></div>
+                </div>
+            </div>
+        )
+    }
+}
+export default MacroDisplay;
