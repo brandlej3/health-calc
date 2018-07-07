@@ -124,3 +124,21 @@ input:focus {
     background: -webkit-gradient(linear, left top, left bottom, from(#f47a20), to(#faa51a));
     background: -moz-linear-gradient(top,  #f47a20,  #faa51a);
 }
+.refresh {
+  margin-left: 25%;
+  margin-bottom: 1%;
+}
+.startover{
+  margin-bottom: 1%;
+  color: black;
+  font-family: 'Bebas_regular';
+  letter-spacing: .08em;
+  font-size: 1.55em;
+  margin-left: 0.20em;
+}
+#choose {
+  color: #CECCCC;
+}
+#inches {
+  color: #CECCCC;
+}

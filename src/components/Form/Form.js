@@ -80,8 +80,23 @@ state = {
     handleActivityLevel = (e) => {
         this.setState({ activityLevel : e.target.id });
     }
+    handleRefresh = () =>
+    {
+        this.setState({
+            showToggle: false,
+            theContent: "",
+            clicked: false,
+            gender: null,
+            weight: null,
+            height: null,
+            age: 0,
+            activityLevel: null,
+            genderError: null,
+            activityError: null
+        });
+    }
     renderCalorieDisplay() {
-        return < CalorieDisplay stateArray={this.state} />;
+        return < CalorieDisplay onClick={this.handleRefresh} stateArray={this.state} />;
     }
     handleMouseOut = () => {
         this.setState({
@@ -114,7 +129,12 @@ state = {
     }
     render() {
         if (this.state.clicked){
-            return this.renderCalorieDisplay();
+            
+        return (
+            <div>
+                <img onClick={this.handleRefresh} title="Click to start over" alt="refreshicon" className="refresh" height="25em" width="25em" src={require("./../../assets/images/refresh.png")} /> <span className="startover">Start Over</span>
+                < CalorieDisplay stateArray={this.state} />
+            </div>);
         } else {
             return (
                 <form onSubmit={ this.handleCalculate }>
@@ -123,8 +143,8 @@ state = {
                             <Col className="gender" xs={12} md={12}>
                                 <h3 className="gender-group">Gender</h3>
                                 <div onClick={this.handleGender} className="gender-group">
-                                    <div className={this.state.gender === "male" ? 'selected' : ''} id="male"></div>
-                                    <div className={this.state.gender === "female" ? 'selected' : ''} id="female"></div>
+                                    <div title="male gender" className={this.state.gender === "male" ? 'selected' : ''} id="male"></div>
+                                    <div title="female gender" className={this.state.gender === "female" ? 'selected' : ''} id="female"></div>
                                     {this.state.genderError ? <span>Please choose your gender!</span> : null}
                                 </div>
                             </Col>
@@ -137,7 +157,7 @@ state = {
                         </Row>
                         <Row>
                             <Col className="heightGrouping" xs={12} md={12}>
-                                <h3 className="input-labels">Height</h3>
+                                <h3 className="input-labels">Height <span id="inches">(inches)</span></h3>
                                 <input name="height" type="number" onKeyUp={this.validateHeight} required></input>
                             </Col>
                         </Row>
@@ -149,12 +169,12 @@ state = {
                         </Row>
                         <Row>
                             <Col className="activityGrouping" xs={12} md={12}>
-                                <h4>Activity Level</h4>
+                                <h4>Activity Level <span id="choose">(Choose One)</span></h4>
                                 <div onClick= {this.handleActivityLevel}>
-                                    <div className={this.state.activityLevel === "sedentary" ? 'activity-grid selected' : 'activity-grid'} id="sedentary"><img className="sedentary" onClick={this.handleHover} alt="info" height="20em" width="20em" src={require("./../../assets/images/infoIcon.png")} /></div>
-                                    <div className={this.state.activityLevel === "light" ? 'activity-grid selected' : 'activity-grid'} id="light"><img className="light" onClick={this.handleHover} alt="info" height="20em" width="20em" src={require("./../../assets/images/infoIcon.png")} /></div>
-                                    <div className={this.state.activityLevel === "moderate" ? 'activity-grid selected' : 'activity-grid'} id="moderate"><img className="moderate" onClick={this.handleHover} alt="info" height="20em" width="20em" src={require("./../../assets/images/infoIcon.png")} /></div>
-                                    <div className={this.state.activityLevel === "very" ? 'activity-grid selected' : 'activity-grid'} id="very"><img className="very" onClick={this.handleHover} alt="info" height="20em" width="20em" src={require("./../../assets/images/infoIcon.png")} /></div>
+                                    <div title="sedentary activity" className={this.state.activityLevel === "sedentary" ? 'activity-grid selected' : 'activity-grid'} id="sedentary"><img className="sedentary" onClick={this.handleHover} alt="info" height="20em" width="20em" src={require("./../../assets/images/infoIcon.png")} /></div>
+                                    <div title="light activity" className={this.state.activityLevel === "light" ? 'activity-grid selected' : 'activity-grid'} id="light"><img className="light" onClick={this.handleHover} alt="info" height="20em" width="20em" src={require("./../../assets/images/infoIcon.png")} /></div>
+                                    <div title="moderate activity" className={this.state.activityLevel === "moderate" ? 'activity-grid selected' : 'activity-grid'} id="moderate"><img className="moderate" onClick={this.handleHover} alt="info" height="20em" width="20em" src={require("./../../assets/images/infoIcon.png")} /></div>
+                                    <div title="very active" className={this.state.activityLevel === "very" ? 'activity-grid selected' : 'activity-grid'} id="very"><img className="very" onClick={this.handleHover} alt="info" height="20em" width="20em" src={require("./../../assets/images/infoIcon.png")} /></div>
                                 </div>
                                 {this.state.activityError ? <span>Please choose your activity level!</span> : null}
                             </Col>
