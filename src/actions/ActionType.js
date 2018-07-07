@@ -1,0 +1,1 @@
+export const ADD_MACRO_OBJ = 'ADD_MACRO_OBJ';

@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import './Form.css';
 import { Button, Grid, Row, Col } from 'react-bootstrap';
 import { CalorieDisplay } from './../Display/Display.js';
+import store from './../../index';
+import { connect } from 'react-redux'; //connect to react store
+import { addMacroObj } from './../../actions';
+import { bindActionCreators } from 'redux';
 import { ActivityModal } from './ActivityModal/ActivityModal.js';
 import  Util from './../../helpers/util.js';
 
@@ -18,7 +22,6 @@ state = {
     genderError: null,
     activityError: null
     }
-
     handleCalculate = (e) => {
         e.preventDefault();
         if(this.validateGenderNotEmpty() === true && this.validateActivityNotEmpty() === true)
@@ -29,6 +32,14 @@ state = {
                 height: parseInt(e.target.height.value, 10),
                 age: parseInt(e.target.age.value, 10)
             });
+            var obj = {
+                gender: this.state.gender,
+                activityLevel: this.state.activityLevel,
+                weight: parseInt(e.target.weight.value, 10),
+                height: parseInt(e.target.height.value, 10),
+                age: parseInt(e.target.age.value, 10)
+            }
+            store.dispatch(addMacroObj(obj));
             window.scrollTo(0,0);
         }
     }
@@ -194,4 +205,8 @@ state = {
         
     }
 }
-export default Form;
+  
+function mapDispatchToProps (dispatch)  {
+    return { actions: bindActionCreators(addMacroObj, dispatch) }
+  }
+export default connect(mapDispatchToProps)(Form);

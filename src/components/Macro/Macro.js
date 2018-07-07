@@ -1,5 +1,9 @@
 import React from 'react';
 import './Macro.css';
+import store from './../../index';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux'; //connect to react store
+import { addMacroObj } from './../../actions';
 import { MacroDisplay } from './MacroDisplay/MacroDisplay';
 import  Util from './../../helpers/util.js';
 
@@ -9,8 +13,11 @@ export class Macro extends React.Component{
         gramsOfProtein: 0,
         gramsOfFat: 0
     }
+
     componentDidMount(){
-        var macroObject = Util.calculateMacros(170, 2600); //replace with input from form tdee calculation
+        var data = store.getState();
+        var calories = Util.calculateTdee(data.gender, data.activityLevel, data.weight, data.height, data.age)
+        var macroObject = Util.calculateMacros(data.weight, calories); //replace with input from form tdee calculation
         this.setState({
             gramsOfCarb: macroObject['cGrams'],
             gramsOfProtein: macroObject['pGrams'],
@@ -27,4 +34,7 @@ export class Macro extends React.Component{
         )
     }
 }
-export default Macro;
+function mapDispatchToProps (dispatch)  {
+    return { actions: bindActionCreators(addMacroObj, dispatch) }
+  }
+export default connect(mapDispatchToProps)(Macro);
