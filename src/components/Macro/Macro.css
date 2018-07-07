@@ -4,24 +4,3 @@
     text-align:center;
     display: inline-block;
 }
-.left {
-    width:200px;
-    height:200px;
-    background-color:red;
-    display:inline-block;
-    margin-right:2%;
-}
-.center {
-    width:200px;
-    height:200px;
-    display:inline-block;
-    background-color:blue;
-    margin-right:2%;
-}
-.right {
-    width:200px;
-    height:200px;
-    background-color:black;
-    display:inline-block;
-    margin-right:2%;
-}

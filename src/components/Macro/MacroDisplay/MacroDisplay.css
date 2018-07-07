@@ -1,0 +1,16 @@
+.block {
+    width:200px;
+    height:200px;
+    display:inline-block;
+    margin-right:2%;
+    font-family: 'Bebas_bold';
+    font-size: 4em;
+    text-align: center;
+    letter-spacing: .05em;
+    border: 2px dotted #E97E21;
+    background: #eee none repeat scroll 0 0;
+    align-content:center;
+    align-items:center;
+    justify-content: center;
+    border-radius: 0.5em;
+}

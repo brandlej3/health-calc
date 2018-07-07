@@ -13,7 +13,7 @@ class Util extends Component {
     }
     static calculateMacros = (weight, calories) =>
     {
-        const proteinMultiplier = 0.7
+        const proteinMultiplier = 0.875
         const fatMultiplier = 0.2
         var macroObject = {
             pGrams : 0,
