@@ -25,6 +25,6 @@ TODO(S):
 - <del>(Fit & Finish) Add restart from scratch when calories are calculated</del>
 - <del>(Architecture) Consolidate calculation in CalorieDisplay component into util file</del>
 - (Feature) Macronutrient breakdown
-    - <del>implement basic functionality</del>
-    - implement macro sliders ( in progress ...)
-    - implement presets (keto, high protein, high carbs)
+    - <del> implement basic functionality </del>
+    - <del> implement macro sliders </del>
+    - implement presets (keto, high protein, high carbs) (in progress...)
