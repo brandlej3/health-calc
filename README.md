@@ -27,4 +27,5 @@ TODO(S):
 - (Feature) Macronutrient breakdown
     - <del> implement basic functionality </del>
     - <del> implement macro sliders </del>
-    - implement presets (keto, high protein, high carbs) (in progress...)
+    - <del> implement presets (keto, high protein, high carbs) </del>
+    - Add validations to prevent user from going over calories in customer slider adjustments
