@@ -28,4 +28,4 @@ TODO(S):
     - <del> implement basic functionality </del>
     - <del> implement macro sliders </del>
     - <del> implement presets (keto, high protein, high carbs) </del>
-    - Add validations to prevent user from going over calories in customer slider adjustments
+    - Add validations to prevent user from going over calories in custom slider adjustments
