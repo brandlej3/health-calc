@@ -23,7 +23,8 @@ npm run build
 TODO(S):
 - <del>(Fit & Finish) Make it so on successful submission the form transitions to calorie display rather than it being appended to the bottom.</del>
 - <del>(Fit & Finish) Add restart from scratch when calories are calculated</del>
+- <del>(Architecture) Consolidate calculation in CalorieDisplay component into util file</del>
 - (Feature) Macronutrient breakdown
-    - implement ( in progress ...)
-    - make it pretty
-- (Architecture) Consolidate calculation in CalorieDisplay component into util file
+    - <del>implement basic functionality</del>
+    - implement macro sliders ( in progress ...)
+    - implement presets (keto, high protein, high carbs)
