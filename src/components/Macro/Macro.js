@@ -27,7 +27,6 @@ export class Macro extends React.Component{
                     gramsOfProtein: this.state.defaultGramsOfProtein,
                     gramsOfFat: this.state.defaultGramsOfFat,
                 });
-                console.log("default");
                 break;
             case "Keto": //adjust macros to keto const multipliers
                 this.setState({
@@ -35,7 +34,6 @@ export class Macro extends React.Component{
                     gramsOfProtein: Math.round((this.state.cals * ketoMultipliers['protein'])/4),
                     gramsOfFat: Math.round((this.state.cals * ketoMultipliers['fat'])/9),
                 });
-                console.log("keto");
                 break;
             case "Paleo": //adjust macros to paleo const multipliers
                 this.setState({
@@ -43,7 +41,6 @@ export class Macro extends React.Component{
                     gramsOfProtein: Math.round((this.state.cals * paleoMultipliers['protein'])/4),
                     gramsOfFat: Math.round((this.state.cals * paleoMultipliers['fat'])/9),
                 });
-                console.log("paleo");
                 break;
             case "High-Carb": //adjust macros to High-carbs const multipliers
                 this.setState({
@@ -51,7 +48,6 @@ export class Macro extends React.Component{
                     gramsOfProtein: Math.round((this.state.cals * highCarbMultipliers['protein'])/4),
                     gramsOfFat: Math.round((this.state.cals * highCarbMultipliers['fat'])/9),
                 });
-                console.log("high carb");
                 break;
             default:
                 break;
@@ -60,13 +56,22 @@ export class Macro extends React.Component{
     handleInputSlide = (e) => {
         switch(e.target.name){
             case "carbs":
-                this.setState({gramsOfCarb : e.target.value})
+                this.setState({
+                    defaultGramsOfCarb : e.target.value,
+                    gramsOfCarb : e.target.value
+                })
                 break;
             case "protein":
-                this.setState({gramsOfProtein : e.target.value})
+                this.setState({
+                    defaultGramsOfProtein: e.target.value,
+                    gramsOfProtein : e.target.value
+                })
                 break;
             case "fat":
-                this.setState({gramsOfFat : e.target.value})
+                this.setState({
+                    defaultGramsOfFat : e.target.value,
+                    gramsOfFat : e.target.value
+                })
                 break;
             default:
                 break;
