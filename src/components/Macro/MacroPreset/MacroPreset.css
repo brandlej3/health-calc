@@ -1,0 +1,21 @@
+
+.big {
+    font-size: 1.2em;
+}
+.dropdown {
+    margin-right: 43%;
+    font-family: 'Bebas_regular';
+}
+.dropdown select {
+    background-color: #E97E21;
+    color: black;
+    font-size: 1.25em;
+    padding: .5em;
+    padding-right: 2.5em;	
+    border: 0;
+    margin: 0;
+    border-radius: 3px;
+    text-indent: 0.01px;
+    text-overflow: '';
+    -webkit-appearance: button;
+}

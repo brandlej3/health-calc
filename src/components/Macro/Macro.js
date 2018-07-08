@@ -5,6 +5,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux'; //connect to react store
 import { addMacroObj } from './../../actions';
 import { MacroDisplay } from './MacroDisplay/MacroDisplay';
+import { MacroPreset } from './MacroPreset/MacroPreset';
 import  Util from './../../helpers/util.js';
 
 export class Macro extends React.Component{
@@ -44,6 +45,7 @@ export class Macro extends React.Component{
                 <MacroDisplay handleChange={(e)=>this.handleInputSlide(e)} unitName="carbs" unitQuantity = {this.state.gramsOfCarb} />
                 <MacroDisplay handleChange={(e)=>this.handleInputSlide(e)} unitName="protein" unitQuantity = {this.state.gramsOfProtein} />
                 <MacroDisplay handleChange={(e)=>this.handleInputSlide(e)} unitName="fat" unitQuantity = {this.state.gramsOfFat} />
+                <MacroPreset />
             </div>
         )
     }
