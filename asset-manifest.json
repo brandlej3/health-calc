@@ -1,10 +1,11 @@
 {
-  "main.css": "static/css/main.d7a79bca.css",
-  "main.css.map": "static/css/main.d7a79bca.css.map",
-  "main.js": "static/js/main.7dad761e.js",
-  "main.js.map": "static/js/main.7dad761e.js.map",
+  "main.css": "static/css/main.a0e1ee90.css",
+  "main.css.map": "static/css/main.a0e1ee90.css.map",
+  "main.js": "static/js/main.5ff94fd5.js",
+  "main.js.map": "static/js/main.5ff94fd5.js.map",
   "static\\media\\Bebas_bold.otf": "static/media/Bebas_bold.524d720f.otf",
   "static\\media\\Bebas_regular.otf": "static/media/Bebas_regular.a105cda5.otf",
   "static\\media\\bannerImage2.jpg": "static/media/bannerImage2.4ff0996f.jpg",
-  "static\\media\\infoIcon.png": "static/media/infoIcon.f16646ac.png"
+  "static\\media\\infoIcon.png": "static/media/infoIcon.f16646ac.png",
+  "static\\media\\refresh.png": "static/media/refresh.7e2e913f.png"
 }
