@@ -7,6 +7,6 @@ export const MacroDisplay = props =>
             { isNaN(props.unitQuantity) ? 0 : props.unitQuantity }<span>g</span>
             <br/>
             { props.unitName }
-            <input type="range" min="0" max="500" defaultValue="3" step="1"/>
+            <input name={props.unitName} type="range" min="0" max="600" value={isNaN(props.unitQuantity) ? 0 : props.unitQuantity} onChange={(e)=>props.handleChange(e)} step="1"/>
         </div>
     );
