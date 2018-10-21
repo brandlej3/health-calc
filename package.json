@@ -8,7 +8,7 @@
     "react-bootstrap": "^0.32.1",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.7",
-    "react-scripts": "1.1.1",
+    "react-scripts": "^2.0.5",
     "react-tabs": "^2.2.2",
     "redux": "^4.0.0"
   },
@@ -22,5 +22,11 @@
   },
   "devDependencies": {
     "gh-pages": "^1.2.0"
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
