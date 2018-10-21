@@ -21,11 +21,14 @@ npm run build
 ## Development
 
 TODO(S):
-- <del>(Fit & Finish) Make it so on successful submission the form transitions to calorie display rather than it being appended to the bottom.</del>
-- <del>(Fit & Finish) Add restart from scratch when calories are calculated</del>
-- <del>(Architecture) Consolidate calculation in CalorieDisplay component into util file</del>
 - (Feature) Macronutrient breakdown
-    - <del> implement basic functionality </del>
-    - <del> implement macro sliders </del>
-    - <del> implement presets (keto, high protein, high carbs) </del>
     - Add validations to prevent user from going over calories in custom slider adjustments
+    - Fix async issue with presets
+- (Feature) Dashboard
+    - Convert to dashboard
+- (Feature) Login
+    - Integrate MongoDB
+    - Add login system
+- (Feature) Weight tracking
+    - Make a whole new tab in dashboard to record daily weigh in
+    - Graph for daily weight
