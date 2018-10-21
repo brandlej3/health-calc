@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Form.css';
 import { Button, Grid, Row, Col } from 'react-bootstrap';
-import { CalorieDisplay } from './../Display/Display.js';
+import { Calorie } from './../Display/CalcDisplay.js';
 import store from './../../index';
 import { connect } from 'react-redux'; //connect to react store
 import { addMacroObj } from './../../actions';
@@ -107,7 +107,7 @@ state = {
         });
     }
     renderCalorieDisplay() {
-        return < CalorieDisplay onClick={this.handleRefresh} stateArray={this.state} />;
+        return < Calorie onClick={this.handleRefresh} stateArray={this.state} />;
     }
     handleMouseOut = () => {
         this.setState({
@@ -144,7 +144,7 @@ state = {
         return (
             <div>
                 <div onClick={this.handleRefresh}><img title="Click to start over" alt="refreshicon" className="refresh" height="25em" width="25em" src={require("./../../assets/images/refresh.png")} /> <span title="Click to start over" className="startover">Start Over</span></div>
-                < CalorieDisplay stateArray={this.state} />
+                < Calorie stateArray={this.state} />
             </div>);
         } else {
             return (

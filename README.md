@@ -21,9 +21,8 @@ npm run build
 ## Development
 
 TODO(S):
-- (Feature) Macronutrient breakdown
-    - Add validations to prevent user from going over calories in custom slider adjustments
-    - Fix async issue with presets
+- <del>(Feature) Macronutrient breakdown</del>
+    <del>- Fix async issue with presets</del>
 - (Feature) Dashboard
     - Convert to dashboard
 - (Feature) Login
