@@ -21,13 +21,9 @@ npm run build
 ## Development
 
 TODO(S):
-- <del>(Feature) Macronutrient breakdown</del>
-    <del>- Fix async issue with presets</del>
-- (Feature) Dashboard
-    - Convert to dashboard
 - (Feature) Login
-    - Integrate MongoDB
-    - Add login system
+    - Integrate backend system + MongoDB
+    - Integrate login system
 - (Feature) Weight tracking
     - Make a whole new tab in dashboard to record daily weigh in
     - Graph for daily weight
